@@ -5,15 +5,23 @@
 #include <map>
 #include <algorithm>
 #include <sstream>
+#include <list>
 
 #include <regex>
 
 
 using namespace std::string_view_literals;
 
-static std::vector<std::string> input = {
+static std::vector<std::string> input_real = {
 
 };
+
+static std::vector<std::string> input_test = {
+
+};
+
+static auto& input = input_real;
+//static auto& input = input_test;
 
 int _x() {
     std::regex r {"(acc|jmp|nop) (\\+|\\-)(\\d+)"};
