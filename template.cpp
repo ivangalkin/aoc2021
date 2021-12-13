@@ -1,3 +1,8 @@
+#ifdef NDEBUG
+#undef NDEBUG
+#endif
+#include <assert.h>
+
 #include <iostream>
 #include <string_view>
 #include <tuple>
@@ -9,6 +14,7 @@
 
 #include <regex>
 
+#define myprint(arg) std::cout << "" #arg << " = " << arg << std::endl;
 
 using namespace std::string_view_literals;
 
