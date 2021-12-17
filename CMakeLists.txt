@@ -21,4 +21,5 @@ add_executable(aoc2021
         _14.cpp
         _15.cpp
         _16.cpp
+        _17.cpp
        )
