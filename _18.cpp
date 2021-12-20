@@ -534,11 +534,17 @@ int _18() {
     for (int i = 0; i < input.size(); i++) {
         for (int j = 0; j < input.size(); j++) {
             if (i == j) continue;
-            auto *left = parse(input[i]);
-            auto *right = parse(input[j]);
-            auto *res0 = sum_loop(left, right);
+            auto *left0 = parse(input[i]);
+            auto *right0 = parse(input[j]);
+            auto *res0 = sum_loop(left0, right0);
             auto res0_magnitude = calculate_magnitude(res0);
             max = std::max(max, res0_magnitude);
+
+            auto *left1 = parse(input[j]);
+            auto *right1 = parse(input[i]);
+            auto *res1 = sum_loop(left1, right1);
+            auto res1_magnitude = calculate_magnitude(res1);
+            max = std::max(max, res1_magnitude);
         }
     }
 
